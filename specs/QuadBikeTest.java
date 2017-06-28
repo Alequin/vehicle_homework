@@ -26,7 +26,7 @@ public class QuadBikeTest{
   }
 
   @Test
-  public void getAverageSpeed(){
+  public void getDriveDistance(){
     int expected = 10;
     int result = quadBike.driveDistance(150);
     assertEquals(expected, result);

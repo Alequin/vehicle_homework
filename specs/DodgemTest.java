@@ -24,4 +24,11 @@ public class DodgemTest{
     dodgem = new Dodgem(4);
     assertEquals(3, dodgem.getNumberOfSeats());
   }
+
+  @Test
+  public void getDriveDistance(){
+    int expected = 10;
+    int result = dodgem.driveDistance(20);
+    assertEquals(expected, result);
+  }
 }
