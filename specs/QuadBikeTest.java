@@ -24,4 +24,11 @@ public class QuadBikeTest{
     quadBike = new QuadBike(1001);
     assertEquals(1000, quadBike.getEngineCapacity());
   }
+
+  @Test
+  public void getAverageSpeed(){
+    int expected = 10;
+    int result = quadBike.driveDistance(150);
+    assertEquals(expected, result);
+  }
 }
