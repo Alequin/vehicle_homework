@@ -1,4 +1,4 @@
-public class Dodgem implements Drivable{
+public class Dodgem extends Vehicle implements Drivable{
 
   public int driveDistance(int distance){
 
