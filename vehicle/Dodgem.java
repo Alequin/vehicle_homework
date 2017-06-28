@@ -13,7 +13,7 @@ public class Dodgem extends Vehicle implements Drivable{
     return 0;
   }
 
-  public ing getNumberOfSeats(){
+  public int getNumberOfSeats(){
     return this.numberOfSeats;
   }
 
