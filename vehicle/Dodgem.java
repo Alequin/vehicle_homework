@@ -6,7 +6,7 @@ public class Dodgem extends Vehicle implements Drivable{
 
   public Dodgem(int numberOfSeats){
     super(2);
-    setNumberOfSeats(numberOfSeats);
+    this.numberOfSeats = validateNumberOfSeats(numberOfSeats);
   }
 
   public int driveDistance(int distance){
@@ -17,19 +17,18 @@ public class Dodgem extends Vehicle implements Drivable{
     return this.numberOfSeats;
   }
 
-  private void setNumberOfSeats(int numberOfSeats){
-    if(numberOfSeats > 0 && numberOfSeats <= 3){
-      this.numberOfSeats = numberOfSeats;
-    }else{
-      setCorrectSeatCount(numberOfSeats);
+  private int validateNumberOfSeats(int numberOfSeats){
+    if(numberOfSeats <= 0 || numberOfSeats > 3){
+      numberOfSeats = getCorrectSeatCount(numberOfSeats);
     }
+    return numberOfSeats;
   }
 
-  private void setCorrectSeatCount(int numberOfSeats){
+  private int getCorrectSeatCount(int numberOfSeats){
     if(numberOfSeats < 0){
-      this.numberOfSeats = 1;
+      return 1;
     }else{
-      this.numberOfSeats = 3;
+      return 3;
     }
   }
 
