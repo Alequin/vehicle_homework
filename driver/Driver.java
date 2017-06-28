@@ -1,6 +1,6 @@
 package driver;
 
-import Vehicle.*;
+import vehicle.*;
 
 public class Driver{
 
@@ -10,6 +10,18 @@ public class Driver{
   public Driver(String name, Drivable ride){
     this.name = name;
     this.ride = ride;
+  }
+
+  public Drivable getCurrentDrivable(){
+    return this.ride;
+  }
+
+  public void setDrivableRide(Drivable ride){
+    this.ride = ride;
+  }
+
+  public int driveDistance(int distance){
+    return this.ride.driveDistance(distance);
   }
 
 }
