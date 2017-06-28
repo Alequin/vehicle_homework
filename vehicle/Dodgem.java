@@ -9,10 +9,6 @@ public class Dodgem extends Vehicle{
     this.numberOfSeats = validateNumberOfSeats(numberOfSeats);
   }
 
-  public int driveDistance(int distance){
-    return 0;
-  }
-
   public int getNumberOfSeats(){
     return this.numberOfSeats;
   }
