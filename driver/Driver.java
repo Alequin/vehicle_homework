@@ -19,4 +19,9 @@ public class Driver{
   public void setDrivableRide(Drivable ride){
     this.ride = ride;
   }
+
+  public int driveDistance(int distance){
+    return this.ride.driveDistance(distance);
+  }
+
 }
