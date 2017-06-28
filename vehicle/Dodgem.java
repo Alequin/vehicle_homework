@@ -17,7 +17,7 @@ public class Dodgem extends Vehicle implements Drivable{
     return this.numberOfSeats;
   }
 
-  public void setNumberOfSeats(int numberOfSeats){
+  private void setNumberOfSeats(int numberOfSeats){
     if(numberOfSeats > 0 && numberOfSeats <= 3){
       this.numberOfSeats = numberOfSeats;
     }else{
