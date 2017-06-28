@@ -6,7 +6,7 @@ public class QuadBike extends Vehicle implements Drivable{
 
   public QuadBike(int engineCapacity){
     super(15);
-    setEngineCapacity(engineCapacity);
+    this.engineCapacity = validateEngineCapacity(engineCapacity);
   }
 
   public int driveDistance(int distance){
@@ -17,19 +17,18 @@ public class QuadBike extends Vehicle implements Drivable{
     return this.engineCapacity;
   }
 
-  private void setEngineCapacity(int engineCapacity){
-    if(engineCapacity >= 49 && engineCapacity <= 1000){
-      this.engineCapacity = engineCapacity;
-    }else{
-      correctEngineCapacity(engineCapacity);
+  private int validateEngineCapacity(int engineCapacity){
+    if(engineCapacity < 49 || engineCapacity > 1000){
+      engineCapacity = getCorrectEngineCapacity(engineCapacity);;
     }
+    return engineCapacity;
   }
 
-  private void correctEngineCapacity(int engineCapacity){
+  private int getCorrectEngineCapacity(int engineCapacity){
     if(engineCapacity < 49){
-      this.engineCapacity = 49;
+      return 49;
     }else{
-      this.engineCapacity = 1000;
+      return 1000;
     }
   }
 
