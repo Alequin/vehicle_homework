@@ -8,4 +8,8 @@ public abstract class Vehicle{
     this.averageSpeed = averageSpeed;
   }
 
+  public int getAverageSpeed(){
+    return this.averageSpeed;
+  }
+
 }
