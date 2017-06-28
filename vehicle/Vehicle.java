@@ -1,6 +1,6 @@
 package vehicle;
 
-public abstract class Vehicle{
+public abstract class Vehicle implements Drivable{
 
   private int averageSpeed;
 
@@ -10,6 +10,11 @@ public abstract class Vehicle{
 
   public int getAverageSpeed(){
     return this.averageSpeed;
+  }
+
+  public int driveDistance(int distance){
+    int time = distance / this.averageSpeed;
+    return time;
   }
 
 }

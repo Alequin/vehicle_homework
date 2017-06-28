@@ -1,6 +1,6 @@
 package vehicle;
 
-public class Dodgem extends Vehicle implements Drivable{
+public class Dodgem extends Vehicle{
 
   private int numberOfSeats;
 

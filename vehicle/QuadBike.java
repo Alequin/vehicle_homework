@@ -1,16 +1,12 @@
 package vehicle;
 
-public class QuadBike extends Vehicle implements Drivable{
+public class QuadBike extends Vehicle{
 
   private int engineCapacity;
 
   public QuadBike(int engineCapacity){
     super(15);
     this.engineCapacity = validateEngineCapacity(engineCapacity);
-  }
-
-  public int driveDistance(int distance){
-    return 0;
   }
 
   public int getEngineCapacity(){
