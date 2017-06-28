@@ -1,3 +1,5 @@
+package vehicle;
+
 public class QuadBike extends Vehicle implements Drivable{
 
   public QuadBike(){
