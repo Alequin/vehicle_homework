@@ -1,6 +1,6 @@
 package driver;
 
-import Vehicle.*;
+import vehicle.*;
 
 public class Driver{
 
@@ -12,4 +12,7 @@ public class Driver{
     this.ride = ride;
   }
 
+  public Drivable getCurrentDrivable(){
+    return this.ride;
+  }
 }

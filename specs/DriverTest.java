@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import vehicle.*;
+import driver.*;
 
 public class DriverTest{
 
@@ -20,7 +21,7 @@ public class DriverTest{
   public void canGetCurrentRide(){
     Drivable ride = driver.getCurrentDrivable();
     Dodgem dodgem = (Dodgem) ride;
-    assertEquals(2, dodgem.numberOfSeats());
+    assertEquals(2, dodgem.getNumberOfSeats());
   }
 
 }
