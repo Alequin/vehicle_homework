@@ -32,4 +32,18 @@ public class DriverTest{
     assertEquals(100, quadBike.getEngineCapacity());
   }
 
+  @Test
+  public void getDriveDistance(){
+    int expected = 10;
+
+    int result_1 = driver.driveDistance(20);
+    assertEquals(expected, result_1);
+
+    driver.setDrivableRide(quadBike);
+    int result_2 = quadBike.driveDistance(150);
+    assertEquals(expected, result_2);
+  }
+
+
+
 }
