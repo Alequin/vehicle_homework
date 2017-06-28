@@ -20,8 +20,16 @@ public class DriverTest{
   @Test
   public void canGetCurrentRide(){
     Drivable ride = driver.getCurrentDrivable();
-    Dodgem dodgem = (Dodgem) ride;
+    dodgem = (Dodgem) ride;
     assertEquals(2, dodgem.getNumberOfSeats());
+  }
+
+  @Test
+  public void canSetCurrentRide(){
+    driver.setDrivableRide(quadBike);
+    Drivable ride = driver.getCurrentDrivable();
+    quadBike = (QuadBike) ride;
+    assertEquals(100, quadBike.getEngineCapacity());
   }
 
 }

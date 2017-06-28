@@ -15,4 +15,8 @@ public class Driver{
   public Drivable getCurrentDrivable(){
     return this.ride;
   }
+
+  public void setDrivableRide(Drivable ride){
+    this.ride = ride;
+  }
 }
